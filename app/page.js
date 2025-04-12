@@ -23,7 +23,7 @@ export default function Home() {
 
   const subsidiaries = [
     {
-      name: "SG-CON",
+      name: "STEAMGOAT CONNECT",
       shortDesc: "24/7 Call Center",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -95,10 +95,7 @@ export default function Home() {
       <nav className="container mx-auto flex items-center justify-between p-4">
         {/* Logo Section */}
         <div className="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-orange-500" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-            <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-          </svg>
+         
           <span className="ml-2 text-2xl font-bold text-blue-900">STEAMGOAT</span>
         </div>
 
@@ -138,7 +135,6 @@ export default function Home() {
         {/* Hero Section */}
         <section className="bg-blue-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl font-bold mb-6">WE DEVOUR YOUR TECH & OUTSOURCING PROBLEMS</h1>
             <p className="text-xl mb-10 max-w-3xl mx-auto">
               At STEAMGOAT, we specialize in innovative solutions to resolve your technology, outsourcing, and talent needs. Let us tackle your business challenges, so you can focus on growth.
             </p>
