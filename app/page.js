@@ -26,7 +26,7 @@ export default function Home() {
       name: "STEAMGOAT CONNECT",
       shortDesc: "24/7 Call Center",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-[#7adfcf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.5 12c0 2.8-2.2 5-5 5s-5-2.2-5-5m10-3c0-2.8-2.2-5-5-5s-5 2.2-5 5" />
         </svg>
@@ -35,9 +35,9 @@ export default function Home() {
     },
     {
       name: "SG-BPO",
-      shortDesc: "Process Outsourcing",
+      shortDesc: "Business Process Outsourcing (BPO)",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-[#7adfcf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
         </svg>
       ),
@@ -45,9 +45,9 @@ export default function Home() {
     },
     {
       name: "SG-TECH",
-      shortDesc: "Software & IT",
+      shortDesc: "IT / Software / Tech",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-[#7adfcf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
         </svg>
       ),
@@ -55,15 +55,27 @@ export default function Home() {
     },
     {
       name: "SG-TALENT",
-      shortDesc: "Skilled Worker Consultancy",
+      shortDesc: "Skilled Worker Outsourcing Consultancy",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-[#7adfcf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
         </svg>
       ),
       description: "SG-TALENT is your partner in sourcing highly skilled professionals across various industries. Whether it's temporary staffing or permanent recruitment, we provide top-tier talent to match your business requirements."
+    },
+    {
+      name: "AURUM HUMANA",
+      shortDesc: "Human-Centric Solutions & Consulting",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-[#7adfcf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0-1.657 1.343-3 3-3h1c1.657 0 3 1.343 3 3v1c0 1.657-1.343 3-3 3h-1c-1.657 0-3-1.343-3-3zM7 11c0-1.657 1.343-3 3-3h1c1.657 0 3 1.343 3 3v1c0 1.657-1.343 3-3 3h-1c-1.657 0-3-1.343-3-3z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 20h14M5 4h14" />
+        </svg>
+      ),
+      description: "AURUM HUMANA redefines consultancy with a human-first approach. We focus on leadership development, organizational culture, and tailored strategies that align people and purpose—empowering teams to thrive in the evolving future of work."
     }
   ];
+  
 
   const testimonials = [
     {
@@ -91,26 +103,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="bg-gray-100">
+      <header >
       <nav className="container mx-auto flex items-center justify-between p-4">
         {/* Logo Section */}
         <div className="flex items-center">
          
-          <span className="ml-2 text-2xl font-bold text-blue-900">STEAMGOAT</span>
+          <span className="ml-2 text-2xl font-bold text-[#0ebcb5]">STEAMGOAT</span>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-4">
-          <a href="#about" className="px-4 py-2 text-blue-900 hover:text-blue-700">About</a>
-          <a href="#subsidiaries" className="px-4 py-2 text-blue-900 hover:text-blue-700">Subsidiaries</a>
-          <a href="#testimonials" className="px-4 py-2 text-blue-900 hover:text-blue-700">Testimonials</a>
-          <a href="#contact" className="px-4 py-2 text-blue-900 hover:text-blue-700">Contact</a>
+          <a href="#about" className="px-4 py-2 text-[#0ebcb5] hover:text-[#7adfcf]">About</a>
+          <a href="#subsidiaries" className="px-4 py-2 text-[#0ebcb5] hover:text-[#7adfcf]">Subsidiaries</a>
+          <a href="#testimonials" className="px-4 py-2 text-[#0ebcb5] hover:text-[#7adfcf]">Testimonials</a>
+          <a href="#contact" className="px-4 py-2 text-[#0ebcb5] hover:text-[#7adfcf]">Contact</a>
         </div>
 
         {/* Mobile Hamburger Icon */}
         <div className="md:hidden">
           <button
-            className="text-blue-900 focus:outline-none"
+            className="text-[#0ebcb5] focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -123,22 +135,22 @@ export default function Home() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2">
-          <a href="#about" className="block text-blue-900 hover:text-blue-700">About</a>
-          <a href="#subsidiaries" className="block text-blue-900 hover:text-blue-700">Subsidiaries</a>
-          <a href="#testimonials" className="block text-blue-900 hover:text-blue-700">Testimonials</a>
-          <a href="#contact" className="block text-blue-900 hover:text-blue-700">Contact</a>
+          <a href="#about" className="block text-[#0ebcb5] hover:text-[#7adfcf]">About</a>
+          <a href="#subsidiaries" className="block text-[#0ebcb5] hover:text-[#7adfcf]">Subsidiaries</a>
+          <a href="#testimonials" className="block text-[#0ebcb5] hover:text-[#7adfcf]">Testimonials</a>
+          <a href="#contact" className="block text-[#0ebcb5] hover:text-[#7adfcf]">Contact</a>
         </div>
       )}
     </header>
 
       <main>
         {/* Hero Section */}
-        <section className="bg-blue-900 text-white py-20">
+        <section className="bg-[#0ebcb5] text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <p className="text-xl mb-10 max-w-3xl mx-auto">
               At STEAMGOAT, we specialize in innovative solutions to resolve your technology, outsourcing, and talent needs. Let us tackle your business challenges, so you can focus on growth.
             </p>
-            <a href="#subsidiaries" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+            <a href="#subsidiaries" className="bg-[#7adfcf] hover:bg-[#7adfcf] text-white font-bold py-3 px-8 rounded-lg transition duration-300">
               Explore Our Subsidiaries
             </a>
           </div>
@@ -147,7 +159,7 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-10 text-blue-900">About STEAMGOAT</h2>
+            <h2 className="text-3xl font-bold text-center mb-10 text-[#0ebcb5]">About STEAMGOAT</h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg mb-6">
                 STEAMGOAT is a global leader in tech-driven outsourcing solutions, delivering expertise in process outsourcing, software development, talent acquisition, and 24/7 support. Our vision is to provide businesses with unparalleled efficiency and scalability, allowing them to thrive in a fast-evolving world.
@@ -163,9 +175,9 @@ export default function Home() {
         </section>
 
         {/* Subsidiaries Section */}
-        <section id="subsidiaries" className="py-16 bg-gray-100">
+        <section id="subsidiaries" className="py-16 bg-[#edfffe]">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-10 text-blue-900">Our Subsidiaries</h2>
+            <h2 className="text-3xl font-bold text-center mb-10 text-[#0ebcb5]">Our Subsidiaries</h2>
             <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
               {subsidiaries.map((subsidiary, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -176,20 +188,20 @@ export default function Home() {
                     <div className="flex items-center">
                       <div className="mr-4">{subsidiary.icon}</div>
                       <div className="text-left">
-                        <h3 className="text-xl font-bold text-blue-900">{subsidiary.name}</h3>
+                        <h3 className="text-xl font-bold text-[#0ebcb5]">{subsidiary.name}</h3>
                         <p className="text-gray-600">{subsidiary.shortDesc}</p>
                       </div>
                     </div>
                     {expandedSubsidiary === index ? (
-                      <ChevronUp className="h-6 w-6 text-blue-900" />
+                      <ChevronUp className="h-6 w-6 text-[#0ebcb5]" />
                     ) : (
-                      <ChevronDown className="h-6 w-6 text-blue-900" />
+                      <ChevronDown className="h-6 w-6 text-[#0ebcb5]" />
                     )}
                   </button>
                   {expandedSubsidiary === index && (
                     <div className="px-6 pb-6">
                       <p className="text-gray-700 mb-4">{subsidiary.description}</p>
-                      <button className="bg-blue-900 hover:bg-blue-800 text-white py-2 px-4 rounded transition duration-300">
+                      <button className="bg-[#0ebcb5] hover:bg-blue-800 text-white py-2 px-4 rounded transition duration-300">
                         Learn More
                       </button>
                     </div>
@@ -203,16 +215,16 @@ export default function Home() {
         {/* Testimonials Section */}
         <section id="testimonials" className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-10 text-blue-900">What Our Clients Say</h2>
+            <h2 className="text-3xl font-bold text-center mb-10 text-[#0ebcb5]">What Our Clients Say</h2>
             <p className="text-lg text-center mb-12 max-w-3xl mx-auto">
               Don't just take our word for it. Hear from our satisfied clients who have experienced transformative results with STEAMGOAT.
             </p>
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-sm">
+                <div key={index} className="bg-[#edfffe] p-6 rounded-lg shadow-sm">
                   <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
                   <div>
-                    <p className="font-bold text-blue-900">{testimonial.author}</p>
+                    <p className="font-bold text-[#0ebcb5]">{testimonial.author}</p>
                     <p className="text-gray-600">{testimonial.position}</p>
                   </div>
                 </div>
@@ -222,9 +234,9 @@ export default function Home() {
         </section>
 
     {/* Global Coverage Section */}
-<section className="py-16 bg-gray-100">
+<section className="py-16 bg-[#edfffe]">
   <div className="container mx-auto px-4">
-    <h2 className="text-3xl font-bold text-center mb-10 text-blue-900">Global Coverage</h2>
+    <h2 className="text-3xl font-bold text-center mb-10 text-[#0ebcb5]">Global Coverage</h2>
     <p className="text-lg text-center mb-12 max-w-3xl mx-auto">
       STEAMGOAT operates across the globe, offering comprehensive solutions to clients in various regions. Our presence in key markets ensures that we are always ready to provide high-quality, scalable services wherever you are.
     </p>
@@ -287,7 +299,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="firstName"
-                  className="w-full p-2 border-b-2 border-orange-500 rounded text-gray-800"
+                  className="w-full p-2 border-b-2 border-[#7adfcf] rounded text-gray-800"
                   required
                 />
               </div>
@@ -298,7 +310,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="lastName"
-                  className="w-full p-2 rounded border-b-2 border-orange-500 text-gray-800"
+                  className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
                   required
                 />
               </div>
@@ -311,7 +323,7 @@ export default function Home() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full p-2 rounded border-b-2 border-orange-500 text-gray-800"
+                  className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
                   required
                 />
               </div>
@@ -322,7 +334,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="company"
-                  className="w-full p-2 rounded border-b-2 border-orange-500 text-gray-800"
+                  className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
                   required
                 />
               </div>
@@ -335,7 +347,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="jobTitle"
-                  className="w-full p-2 rounded border-b-2 border-orange-500 text-gray-800"
+                  className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
                   required
                 />
               </div>
@@ -346,7 +358,7 @@ export default function Home() {
                 <input
                   type="tel"
                   id="phone"
-                  className="w-full p-2  rounded border-b-2 border-orange-500 text-gray-800"
+                  className="w-full p-2  rounded border-b-2 border-[#7adfcf] text-gray-800"
                 />
               </div>
             </div>
@@ -358,7 +370,7 @@ export default function Home() {
             </div>
             <button
               type="submit"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded transition duration-300"
+              className="bg-[#7adfcf] hover:bg-[#7adfcf] text-white font-bold py-3 px-8 rounded transition duration-300"
             >
               SUBMIT
             </button>
@@ -371,20 +383,20 @@ export default function Home() {
 
       </main>
 
-      <footer className="bg-gray-800 text-white py-8">
+      <footer className="bg-white text-black py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-orange-500" viewBox="0 0 20 20" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#7adfcf]" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                 <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
               </svg>
               <span className="ml-2 text-xl font-bold">STEAMGOAT</span>
             </div>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-orange-500 transition duration-300">Privacy Policy</a>
-              <a href="#" className="hover:text-orange-500 transition duration-300">Terms of Service</a>
-              <a href="#" className="hover:text-orange-500 transition duration-300">Contact Us</a>
+              <a href="#" className="hover:text-[#7adfcf] transition duration-300">Privacy Policy</a>
+              <a href="#" className="hover:text-[#7adfcf] transition duration-300">Terms of Service</a>
+              <a href="#" className="hover:text-[#7adfcf] transition duration-300">Contact Us</a>
             </div>
           </div>
           <div className="mt-6 text-center text-gray-400">
