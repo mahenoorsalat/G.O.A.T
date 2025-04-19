@@ -65,7 +65,7 @@ export default function Home() {
     },
     {
       name: "AURUM HUMANA",
-      shortDesc: "Human-Centric Solutions & Consulting",
+      shortDesc: "Recruitment",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-[#7adfcf]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0-1.657 1.343-3 3-3h1c1.657 0 3 1.343 3 3v1c0 1.657-1.343 3-3 3h-1c-1.657 0-3-1.343-3-3zM7 11c0-1.657 1.343-3 3-3h1c1.657 0 3 1.343 3 3v1c0 1.657-1.343 3-3 3h-1c-1.657 0-3-1.343-3-3z" />
