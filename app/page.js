@@ -9,7 +9,28 @@ import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
+    formData.append("access_key", "153bb823-77a6-4299-9ab9-c5c686567d4d");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+    });
+    const result = await response.json();
+    if (result.success) {
+        console.log(result);
+    }
+}
   const [expandedSubsidiary, setExpandedSubsidiary] = useState(null);
   const geoUrl =
   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
@@ -289,7 +310,7 @@ export default function Home() {
           </h2>
         </div>
         <div className="md:w-1/2">
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <p className="mb-4">All the fields marked with * are required</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -299,6 +320,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="firstName"
+                  name="firstName"
                   className="w-full p-2 border-b-2 border-[#7adfcf] rounded text-gray-800"
                   required
                 />
@@ -310,6 +332,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="lastName"
+                  name="lastName"
                   className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
                   required
                 />
@@ -322,6 +345,7 @@ export default function Home() {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   id="email"
                   className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
                   required
@@ -334,6 +358,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="company"
+                  name="company"
                   className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
                   required
                 />
@@ -347,6 +372,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="jobTitle"
+                  name="jobTitle"
                   className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
                   required
                 />
@@ -358,6 +384,7 @@ export default function Home() {
                 <input
                   type="tel"
                   id="phone"
+                  name="phone"
                   className="w-full p-2  rounded border-b-2 border-[#7adfcf] text-gray-800"
                 />
               </div>
@@ -370,7 +397,7 @@ export default function Home() {
             </div>
             <button
               type="submit"
-              className="bg-[#7adfcf] hover:bg-[#7adfcf] text-white font-bold py-3 px-8 rounded transition duration-300"
+              className="bg-[#08918c] hover:bg-[#7adfcf] text-white font-bold py-3 px-8 rounded transition duration-300"
             >
               SUBMIT
             </button>
