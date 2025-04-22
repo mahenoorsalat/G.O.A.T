@@ -9,28 +9,33 @@ import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [message, setMessage] = useState("");
+
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-
-    formData.append("access_key", "153bb823-77a6-4299-9ab9-c5c686567d4d");
+    formData.append("access_key", process.env.NEXT_PUBLIC_EMAIL_ACCESS_KEY);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
     const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: json
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
     });
+
     const result = await response.json();
     if (result.success) {
-        console.log(result);
+      console.log(result);
+      setSubmitted(true);
+      setMessage("Your form has been submitted successfully!");
     }
-}
+  }
   const [expandedSubsidiary, setExpandedSubsidiary] = useState(null);
   const geoUrl =
   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
@@ -395,12 +400,24 @@ export default function Home() {
                 Opt in for marketing communication
               </label>
             </div>
+
+             {/* ✅ Success message */}
+      {submitted && (
+        <p className="text-green-200 font-semibold pt-2">{message}</p>
+      )}
             <button
-              type="submit"
-              className="bg-[#08918c] hover:bg-[#7adfcf] text-white font-bold py-3 px-8 rounded transition duration-300"
-            >
-              SUBMIT
-            </button>
+        type="submit"
+        className={`font-bold py-3 px-8 rounded transition duration-300 ${
+          submitted
+            ? "bg-green-500 pointer-events-none"
+            : "bg-[#08918c] hover:bg-[#7adfcf] text-white"
+        }`}
+        disabled={submitted}
+      >
+        {submitted ? "SUBMITTED" : "SUBMIT"}
+      </button>
+
+     
           </form>
         </div>
       </div>
@@ -413,13 +430,11 @@ export default function Home() {
       <footer className="bg-white text-black py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center mb-4 md:mb-0">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#7adfcf]" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-              </svg>
-              <span className="ml-2 text-xl font-bold">STEAMGOAT</span>
-            </div>
+          <div className="flex items-center mb-4 md:mb-0">
+
+  <span className="ml-2 text-xl font-bold">STEAMGOAT</span>
+</div>
+
             <div className="flex space-x-4">
               <a href="#" className="hover:text-[#7adfcf] transition duration-300">Privacy Policy</a>
               <a href="#" className="hover:text-[#7adfcf] transition duration-300">Terms of Service</a>
