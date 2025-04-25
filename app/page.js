@@ -381,13 +381,14 @@ export default function Home() {
 </div>
 
             <div className="flex space-x-4">
+            <a target='_blank' href="https://www.linkedin.com/company/steamgoat/" className="hover:text-[#7adfcf] transition duration-300">Linkedin</a>
               <a href="#" className="hover:text-[#7adfcf] transition duration-300">Privacy Policy</a>
               <a href="#" className="hover:text-[#7adfcf] transition duration-300">Terms of Service</a>
               <a href="#" className="hover:text-[#7adfcf] transition duration-300">Contact Us</a>
             </div>
           </div>
           <div className="mt-6 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} STEAMGOAT. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} STEAMGOAT | Developed By <a target='_blank' className='text-[#7adfcf] underline' href='https://www.linkedin.com/in/mahenoor-salat/'>Mahenoor</a> | All rights reserved.</p>
           </div>
         </div>
       </footer>
