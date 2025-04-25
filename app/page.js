@@ -183,17 +183,17 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-16 bg-white">
+        <section id="about" className="py-16 bg-white ">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-10 text-[#0ebcb5]">About STEAMGOAT</h2>
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg mb-6">
+              <p className="text-lg text-black mb-6">
                 STEAMGOAT is a global leader in tech-driven outsourcing solutions, delivering expertise in process outsourcing, software development, talent acquisition, and 24/7 support. Our vision is to provide businesses with unparalleled efficiency and scalability, allowing them to thrive in a fast-evolving world.
               </p>
-              <p className="text-lg mb-6">
+              <p className="text-lg text-black mb-6">
                 With our commitment to innovation, we empower clients across various industries to overcome technological barriers and optimize their operations with the help of our expert subsidiaries.
               </p>
-              <p className="text-lg">
+              <p className="text-lg text-black">
                 Explore how our subsidiaries redefine outsourcing in each sector and discover the bespoke solutions we offer.
               </p>
             </div>
@@ -263,7 +263,7 @@ export default function Home() {
 <section className="py-16 bg-[#edfffe]">
   <div className="container mx-auto px-4">
     <h2 className="text-3xl font-bold text-center mb-10 text-[#0ebcb5]">Global Coverage</h2>
-    <p className="text-lg text-center mb-12 max-w-3xl mx-auto">
+    <p className="text-black text-lg text-center mb-12 max-w-3xl mx-auto">
       STEAMGOAT operates across the globe, offering comprehensive solutions to clients in various regions. Our presence in key markets ensures that we are always ready to provide high-quality, scalable services wherever you are.
     </p>
     <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
@@ -305,125 +305,70 @@ export default function Home() {
   id="contact"
   className="py-16 text-white bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat"
 >
+  <div className="bg-opacity-80 py-12 px-4">
+    <div className="container mx-auto px-4 max-w-6xl bg-white bg-opacity-10 rounded-md p-6">
+      <h2 className="text-3xl text-[#08918c] font-bold text-center mb-6">
+        Get In Touch
+      </h2>
+      <p className="text-center text-black text-sm mb-8">
+        To find out how our intelligent, efficient and economical services can help you gain, retain and grow your customers’ business, please get in touch below.
+      </p>
+      <form onSubmit={handleSubmit} className="space-y-5">
+        <input
+          type="text"
+          name="fullName"
+          placeholder="Full Name"
+          className="w-full p-3 rounded border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#7adfcf]"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          className="w-full p-3 rounded border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#7adfcf]"
+          required
+        />
+        <input
+          type="text"
+          name="company"
+          placeholder="Company"
+          className="w-full p-3 rounded border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#7adfcf]"
+          required
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone"
+          className="w-full p-3 rounded border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#7adfcf]"
+        />
+        <textarea
+          name="message"
+          placeholder="Message"
+          className="w-full p-3 rounded border border-gray-300 text-gray-900 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-[#7adfcf]"
+        />
+        
+        {submitted && (
+          <p className="text-green-200 font-semibold pt-2">{message}</p>
+        )}
 
-  <div className=" bg-opacity-80 py-12 px-4">
-    <div className="container mx-auto px-4">
-      <div className="flex flex-col items-center justify-between max-w-6xl ">
-        <div className="md:w-1/2 mb-10 md:mb-0">
-          <h2 className="text-4xl font-bold mb-6">
-            Stay connected with us for latest news and updates
-          </h2>
+        <div className="text-center">
+          <button
+            type="submit"
+            className={`font-bold py-3 px-10 rounded transition duration-300 ${
+              submitted
+                ? "bg-green-500 pointer-events-none"
+                : "bg-[#08918c] hover:bg-[#7adfcf] text-white"
+            }`}
+            disabled={submitted}
+          >
+            {submitted ? "SUBMITTED" : "SEND MESSAGE"}
+          </button>
         </div>
-        <div className="md:w-1/2">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <p className="mb-4">All the fields marked with * are required</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="firstName" className="block mb-1">
-                  FIRST NAME*
-                </label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  className="w-full p-2 border-b-2 border-[#7adfcf] rounded text-gray-800"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="lastName" className="block mb-1">
-                  LAST NAME*
-                </label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
-                  required
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="email" className="block mb-1">
-                  EMAIL*
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="company" className="block mb-1">
-                  COMPANY*
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
-                  required
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="jobTitle" className="block mb-1">
-                  JOB TITLE*
-                </label>
-                <input
-                  type="text"
-                  id="jobTitle"
-                  name="jobTitle"
-                  className="w-full p-2 rounded border-b-2 border-[#7adfcf] text-gray-800"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="block mb-1">
-                  PHONE
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="w-full p-2  rounded border-b-2 border-[#7adfcf] text-gray-800"
-                />
-              </div>
-            </div>
-            <div className="flex items-center">
-              <input type="checkbox" id="marketing" className="mr-2" />
-              <label htmlFor="marketing">
-                Opt in for marketing communication
-              </label>
-            </div>
-
-             {/* ✅ Success message */}
-      {submitted && (
-        <p className="text-green-200 font-semibold pt-2">{message}</p>
-      )}
-            <button
-        type="submit"
-        className={`font-bold py-3 px-8 rounded transition duration-300 ${
-          submitted
-            ? "bg-green-500 pointer-events-none"
-            : "bg-[#08918c] hover:bg-[#7adfcf] text-white"
-        }`}
-        disabled={submitted}
-      >
-        {submitted ? "SUBMITTED" : "SUBMIT"}
-      </button>
-
-     
-          </form>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
 </section>
+
 
       </main>
 
